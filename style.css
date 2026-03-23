@@ -17,7 +17,7 @@
 }
 @font-face {
   font-family: BitCount; /* set name */
-  src: url(sansation_light.woff); /* url of the font */
+  src:font/bitcount.ttf; /* url of the font */
 }
 
 p {
