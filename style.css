@@ -1,4 +1,4 @@
-.btn-blue {
+.bottone1 {
   display: inline-block;
   background-color: #378ADD;
   color: #fff;
@@ -11,7 +11,7 @@
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.btn-blue:hover {
+.bottone1:hover {
   background-color: #7F77DD;
   transform: scale(1.08);
 }
