@@ -15,3 +15,11 @@
   background-color: #7F77DD;
   transform: scale(1.08);
 }
+@font-face {
+  font-family: BitCount; /* set name */
+  src: url(sansation_light.woff); /* url of the font */
+}
+
+p {
+  font-family: Bitcount; /* use font */
+}
