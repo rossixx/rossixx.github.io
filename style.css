@@ -1,83 +1,122 @@
-/* 1. Define BitCount (Fixed Syntax) */
 @font-face {
   font-family: 'BitCount';
   src: url('font/bitcount.ttf') format('truetype');
-  font-display: swap; /* Ensures text is visible immediately */
+  font-display: swap;
 }
-/* 3. Apply Fonts */
+
+/* === Y2K BASE === */
 body {
-  font-family: 'Google Sans', sans-serif;
-    /* Centering Logic */
+  font-family: 'VT323', monospace;
+  background-color: #000033;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 255, 0.03) 2px,
+    rgba(0, 255, 255, 0.03) 4px
+  );
+  color: #00ffff;
   display: flex;
-  flex-direction: column; /* Stacks items vertically */
-  align-items: center;    /* Centers horizontally */
-  justify-content: center;/* Centers vertically (optional, removes from top) */
-  min-height: 100vh;      /* Ensures body takes full screen height */
-  margin: 0;              /* Removes default browser margins */
-  text-align: center;     /* Ensures text inside <p> is centered */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 30px #ff00ff88;
+  margin-bottom: 4px;
+  letter-spacing: 4px;
 }
 
 p {
-font-family: 'Google Sans', sans-serif;
-font-size: 25px;
+  font-family: 'VT323', monospace;
+  font-size: 28px;
+  color: #ffff00;
+  text-shadow: 0 0 8px #ffff00;
 }
 
-button, 
-input, 
-textarea, 
-select, 
-optgroup, 
-option {
-  font-family: 'Google Sans', sans-serif;
-}
-
-/* 4. Your Button Styles */
-.bottone1 {
-  display: inline-block;
-  background-color: #378ADD;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 12px 28px;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  font-family: 'Google Sans', sans-serif;
-}
-
-.bottone1:hover {
-  background-color: #7F77DD;
-  transform: scale(1.08);
-}   
+/* === SCROLLING BAR === */
 .scrolling-text {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   margin: 20px 0;
-  font-size: 18px;
-  font-weight: bold; /* Makes black text pop more */
-  
-  /* Fluo Yellow Background with Black Text */
-  background-color: #CCFF00; /* Neon Yellow */
-  color: #000000;            /* Black Text */
-  
-  /* Optional: Add a subtle border or shadow for definition */
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+  color: #000;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding: 4px 0;
 }
 
 .scrolling-text span {
   display: inline-block;
-  padding-left: 100%; /* Starts text off-screen to the RIGHT */
-  animation: scroll-left 5s linear infinite;
+  padding-left: 100%;
+  animation: scroll-left 8s linear infinite;
 }
 
-/* Animation: Moves from Right (0%) to Left (-100%) */
 @keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* === BUTTONS === */
+.buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.bottone1 {
+  display: inline-block;
+  background: linear-gradient(180deg, #aaaaff, #000080);
+  color: #fff;
+  border: 3px outset #8888ff;
+  border-radius: 0;
+  padding: 10px 24px;
+  font-size: 20px;
+  font-family: 'VT323', monospace;
+  font-weight: normal;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0 0 6px #fff;
+  transition: filter 0.1s;
+}
+
+.bottone1:hover {
+  filter: brightness(1.5);
+  border-style: inset;
+}
+
+/* === GOOGLE FORM BOX === */
+.form-box {
+  width: 90%;
+  max-width: 640px;
+  margin: 30px auto;
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 16px #ff00ff88;
+  padding: 12px;
+  background: rgba(0, 0, 50, 0.7);
+}
+
+.form-title {
+  font-size: 24px;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.form-box iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
