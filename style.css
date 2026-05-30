@@ -23,3 +23,7 @@
 p {
   font-family: Bitcount; /* use font */
 }
+
+body {
+  font-family: 'Google Sans', sans-serif;
+}   
