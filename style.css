@@ -7,15 +7,11 @@
 /* === Y2K BASE === */
 body {
   font-family: 'VT323', monospace;
-  background-color: #000033;
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 255, 255, 0.03) 2px,
-    rgba(0, 255, 255, 0.03) 4px
-  );
-  color: #00ffff;
+  background-color: #ffccee;
+  background-image:
+    radial-gradient(circle, #ff99cc 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #cc0066;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,18 +22,19 @@ body {
 }
 
 h1 {
-  font-size: 3em;
-  color: #ff00ff;
-  text-shadow: 0 0 10px #ff00ff, 0 0 30px #ff00ff88;
+  font-size: 3.5em;
+  color: #ff0099;
+  text-shadow: 3px 3px 0px #cc00ff, 6px 6px 0px #ffff00;
   margin-bottom: 4px;
   letter-spacing: 4px;
+  -webkit-text-stroke: 1px #cc0066;
 }
 
 p {
   font-family: 'VT323', monospace;
   font-size: 28px;
-  color: #ffff00;
-  text-shadow: 0 0 8px #ffff00;
+  color: #9900cc;
+  text-shadow: 1px 1px 0 #ffff00;
 }
 
 /* === SCROLLING BAR === */
@@ -48,11 +45,18 @@ p {
   margin: 20px 0;
   font-size: 22px;
   font-weight: bold;
-  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
-  color: #000;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  padding: 4px 0;
+  background: repeating-linear-gradient(
+    90deg,
+    #ff0099,
+    #ff66cc 20%,
+    #cc00ff 40%,
+    #ff0099 60%
+  );
+  color: #fff;
+  border-top: 3px solid #ffff00;
+  border-bottom: 3px solid #ffff00;
+  padding: 6px 0;
+  text-shadow: 1px 1px 0 #cc0066;
 }
 
 .scrolling-text span {
@@ -77,40 +81,43 @@ p {
 
 .bottone1 {
   display: inline-block;
-  background: linear-gradient(180deg, #aaaaff, #000080);
+  background: linear-gradient(180deg, #ff99dd, #ff0099);
   color: #fff;
-  border: 3px outset #8888ff;
-  border-radius: 0;
+  border: 3px outset #ff66cc;
+  border-radius: 12px;
   padding: 10px 24px;
   font-size: 20px;
   font-family: 'VT323', monospace;
   font-weight: normal;
   cursor: pointer;
   text-decoration: none;
-  text-shadow: 0 0 6px #fff;
-  transition: filter 0.1s;
+  text-shadow: 1px 1px 0 #cc0066;
+  box-shadow: 0 4px 0 #cc0066, inset 0 1px 0 #ffccee;
+  transition: filter 0.1s, transform 0.1s;
 }
 
 .bottone1:hover {
-  filter: brightness(1.5);
+  filter: brightness(1.15);
+  transform: translateY(-2px);
   border-style: inset;
 }
 
-/* === GOOGLE FORM BOX === */
+/* === FORM BOX === */
 .form-box {
   width: 90%;
   max-width: 640px;
   margin: 30px auto;
-  border: 2px solid #ff00ff;
-  box-shadow: 0 0 16px #ff00ff88;
-  padding: 12px;
-  background: rgba(0, 0, 50, 0.7);
+  border: 3px solid #ff0099;
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 #cc00ff, 8px 8px 0 #ffff00;
+  padding: 16px;
+  background: #fff0f8;
 }
 
 .form-title {
-  font-size: 24px;
-  color: #00ffff;
-  text-shadow: 0 0 8px #00ffff;
+  font-size: 28px;
+  color: #ff0099;
+  text-shadow: 2px 2px 0 #ffff00;
   margin-bottom: 8px;
   letter-spacing: 2px;
 }
@@ -119,4 +126,5 @@ p {
   display: block;
   width: 100%;
   border: none;
+  border-radius: 8px;
 }
