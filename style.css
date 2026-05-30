@@ -1,3 +1,28 @@
+/* 1. Define BitCount (Fixed Syntax) */
+@font-face {
+  font-family: 'BitCount';
+  src: url('font/bitcount.ttf') format('truetype');
+  font-display: swap; /* Ensures text is visible immediately */
+}
+/* 3. Apply Fonts */
+body {
+  font-family: 'Google Sans', sans-serif;
+}
+
+p {
+  font-family: 'BitCount', monospace; /* Fallback to monospace suits pixel fonts better */
+}
+
+button, 
+input, 
+textarea, 
+select, 
+optgroup, 
+option {
+  font-family: 'Google Sans', sans-serif;
+}
+
+/* 4. Your Button Styles */
 .bottone1 {
   display: inline-block;
   background-color: #378ADD;
@@ -9,21 +34,10 @@
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .bottone1:hover {
   background-color: #7F77DD;
   transform: scale(1.08);
-}
-@font-face {
-  font-family: BitCount; /* set name */
-  src:font/bitcount.ttf; /* url of the font */
-}
-
-p {
-  font-family: Bitcount; /* use font */
-}
-
-body {
-  font-family: 'Google Sans', sans-serif;
 }   
