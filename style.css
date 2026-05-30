@@ -7,10 +7,19 @@
 /* 3. Apply Fonts */
 body {
   font-family: 'Google Sans', sans-serif;
+    /* Centering Logic */
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center;    /* Centers horizontally */
+  justify-content: center;/* Centers vertically (optional, removes from top) */
+  min-height: 100vh;      /* Ensures body takes full screen height */
+  margin: 0;              /* Removes default browser margins */
+  text-align: center;     /* Ensures text inside <p> is centered */
 }
 
 p {
-  font-family: 'BitCount', monospace; /* Fallback to monospace suits pixel fonts better */
+font-family: 'Google Sans', sans-serif;
+font-size: 25px;
 }
 
 button, 
@@ -41,3 +50,34 @@ option {
   background-color: #7F77DD;
   transform: scale(1.08);
 }   
+.scrolling-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold; /* Makes black text pop more */
+  
+  /* Fluo Yellow Background with Black Text */
+  background-color: #CCFF00; /* Neon Yellow */
+  color: #000000;            /* Black Text */
+  
+  /* Optional: Add a subtle border or shadow for definition */
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.scrolling-text span {
+  display: inline-block;
+  padding-left: 100%; /* Starts text off-screen to the RIGHT */
+  animation: scroll-left 15s linear infinite;
+}
+
+/* Animation: Moves from Right (0%) to Left (-100%) */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
